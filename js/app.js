@@ -127,30 +127,82 @@ function renderTopbar(){
 }
 
 /* ===================== render: home ===================== */
+const prefersReducedMotion = () => window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+function animateCount(elm, target){
+  if(prefersReducedMotion() || target===0){ elm.textContent=String(target); return; }
+  const start=performance.now(), dur=900;
+  function tick(now){
+    const t=Math.min(1,(now-start)/dur);
+    const eased=1-Math.pow(1-t,3);
+    elm.textContent=String(Math.round(eased*target));
+    if(t<1) requestAnimationFrame(tick);
+  }
+  requestAnimationFrame(tick);
+}
+
 function renderHome(){
   const wrap=el('div',{class:'home'});
-  wrap.appendChild(el('div',{class:'home-head'},
-    `<div class="home-eyebrow">Iniciativas comerciales</div>
-     <h1 class="home-title">¿Qué canal quieres revisar?</h1>
-     <p class="home-desc">Elige un canal para ver sus iniciativas vigentes, filtrarlas por quién las creó, mes o año, y revisar inversión, vigencia y material de cada una.</p>`));
+
+  const totalDocs = S.docs.length;
+  const totalInv = S.docs.reduce((sum,d)=> sum + (typeof d.inversionMonto==='number' ? d.inversionMonto : 0), 0);
+  const activeChannels = SEGMENTS.filter(s=>docsForSegment(s.id).length>0).length;
+
+  const hero=el('div',{class:'home-hero'});
+  const bgIcons=el('div',{class:'home-hero-icons', 'aria-hidden':'true'});
+  bgIcons.innerHTML=`
+    <svg viewBox="0 0 30 30" fill="none" style="width:170px;height:170px;top:-30px;right:6%;transform:rotate(-12deg);" stroke-width="1.3">${SEGMENTS[1].icon}</svg>
+    <svg viewBox="0 0 30 30" fill="none" style="width:120px;height:120px;bottom:-20px;right:28%;transform:rotate(10deg);" stroke-width="1.3">${SEGMENTS[2].icon}</svg>
+    <svg viewBox="0 0 30 30" fill="none" style="width:130px;height:130px;top:30%;left:-30px;transform:rotate(8deg);" stroke-width="1.3">${SEGMENTS[0].icon}</svg>
+  `;
+  hero.appendChild(bgIcons);
+
+  const inner=el('div',{class:'home-hero-inner'});
+  inner.innerHTML=`
+    <div class="home-eyebrow"><span class="rule"></span>Iniciativas comerciales</div>
+    <h1 class="home-title">Todo lo que está corriendo <span class="accent-text">en el punto de venta</span>, en un solo lugar.</h1>
+    <p class="home-desc">Elige un canal para ver sus iniciativas vigentes, filtrarlas por quién las creó, mes o año, y revisar inversión, vigencia y material de cada una — sin ir a buscarlo en el Word.</p>
+    <div class="home-stats">
+      <div class="stat"><div class="stat-value" data-count="${totalDocs}">0</div><div class="stat-label">Iniciativas cargadas</div></div>
+      <div class="stat"><div class="stat-value" data-count="${activeChannels}">0</div><div class="stat-label">de ${SEGMENTS.length} canales activos</div></div>
+      <div class="stat"><div class="stat-value">${formatCOP(totalInv)||'$0'}</div><div class="stat-label">Inversión total registrada</div></div>
+    </div>
+  `;
+  hero.appendChild(inner);
+  wrap.appendChild(hero);
 
   const grid=el('div',{class:'segment-grid'});
-  SEGMENTS.forEach(seg=>{
+  SEGMENTS.forEach((seg,i)=>{
     const list=docsForSegment(seg.id);
-    const card=el('button',{class:'segment-card', style:`--seg-color:${seg.color}`});
+    const card=el('button',{class:'segment-card', style:`--seg-color:${seg.color}; --i:${i};`});
     card.innerHTML=`
       <div class="segment-tab"></div>
       <svg class="segment-icon" viewBox="0 0 30 30" fill="none">${seg.icon}</svg>
       <div class="segment-meta"><div class="segment-name">${esc(seg.label)}</div></div>
       ${list.length
-        ? `<div class="segment-count"><b>${list.length}</b> iniciativa${list.length===1?'':'s'} cargada${list.length===1?'':'s'}</div>`
+        ? `<div class="segment-badge"><span class="segment-badge-value">${list.length}</span><span class="segment-badge-label">iniciativa${list.length===1?'':'s'} cargada${list.length===1?'':'s'}</span></div>`
         : `<span class="segment-empty-tag">Próximamente</span>`}
       <div class="segment-cta">Ver iniciativas ${ICONS.arrow}</div>
     `;
     card.addEventListener('click', ()=>openSegment(seg.id));
+    if(!prefersReducedMotion()){
+      card.addEventListener('mousemove', (e)=>{
+        const r=card.getBoundingClientRect();
+        const px=(e.clientX-r.left)/r.width - .5;
+        card.style.setProperty('--tilt', (px*2.2).toFixed(2)+'deg');
+      });
+      card.addEventListener('mouseleave', ()=> card.style.setProperty('--tilt','0deg'));
+    }
     grid.appendChild(card);
   });
   wrap.appendChild(grid);
+
+  requestAnimationFrame(()=>{
+    wrap.querySelectorAll('.stat-value[data-count]').forEach(elm=>{
+      animateCount(elm, Number(elm.dataset.count));
+    });
+  });
+
   return wrap;
 }
 

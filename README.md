@@ -85,9 +85,16 @@ manifest.json, sw.js, icons/ → hacen que el sitio se pueda "instalar" como app
 
 El sitio ya está publicado en `https://pracsegmentos.github.io/vitrina-comercial/` vía **GitHub Actions** (`.github/workflows/pages.yml`, Settings → Pages → Source: "GitHub Actions"). Cada push a `main` — tuyo o desde `admin.html` — dispara un deploy automático; no hay build, solo copia los archivos tal cual. (Se cambió desde el método "legacy" porque ese empezó a fallar sin detalle.)
 
+## Cómo se maneja un mes nuevo
+
+Cuando llega información de un mes nuevo (ej. noviembre) para un canal que ya tenía iniciativas:
+
+- Si la iniciativa **sigue siendo la misma** (mismo nombre y mecánica, solo se renueva) → se **extiende** el campo `meses` del registro existente para incluir el mes nuevo, en vez de crear una tarjeta duplicada. Ejemplo: `t15` (PRIA campaña Yupi), `t18` (PRIA Ducales Queso) y `t21` (PRIA Plan Expertise Monticello) ya cubren octubre y noviembre en un solo registro.
+- Si es una **iniciativa distinta** (otro producto, otra mecánica) aunque se vea parecida → se carga como una tarjeta nueva con su propio `id`.
+
 ## Pendiente
 
-- Cargar iniciativas de Droguería/Masivo/Bienestar (hoy solo tiene datos de Superetes y Minimercados, octubre).
+- Cargar iniciativas de Droguería/Masivo/Bienestar (hoy solo tiene datos de Superetes y Minimercados, octubre-noviembre).
 - Revisar la ambigüedad de PDV marcada con ⚠️ en "PRIA campaña Yupi" (la mecánica dice 40 puntas de góndola, la tabla de asignación suma 50).
 - Completar mecánica, vigencia e inversión de las iniciativas cuya presentación de origen no tiene texto extraíble (solo imágenes): `r02` (Pasto Aniversario Titán), `r04` (Quincenazo de Café — Santander), `m02` (Reto 50-100 Antioquia), `m04` (Mes del Desatrace Ahorramax Bogotá), `m05` (Septiembrazo MM Tolima).
 - Confirmar con el equipo regional si "Cierre de Brechas — Altillano" (`r01`) debe quedar como una sola iniciativa o separarse en sus 3 incentivos por cliente (Su Amigo, Donde Vicson, Manaba Merkafruver).

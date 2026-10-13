@@ -81,12 +81,13 @@ images/logo-nutresa.png     → logo usado en el encabezado
 manifest.json, sw.js, icons/ → hacen que el sitio se pueda "instalar" como app y funcione offline
 ```
 
-## Publicar en GitHub Pages
+## Publicación (GitHub Pages)
 
-En este repositorio: **Settings → Pages → Source: branch `main` / carpeta `/ (root)`**. El sitio queda disponible en `https://pracsegmentos.github.io/vitrina-comercial/`.
+El sitio ya está publicado en `https://pracsegmentos.github.io/vitrina-comercial/` vía **GitHub Actions** (`.github/workflows/pages.yml`, Settings → Pages → Source: "GitHub Actions"). Cada push a `main` — tuyo o desde `admin.html` — dispara un deploy automático; no hay build, solo copia los archivos tal cual. (Se cambió desde el método "legacy" porque ese empezó a fallar sin detalle.)
 
 ## Pendiente
 
 - Cargar iniciativas de Minimercados y Droguería/Masivo/Bienestar (hoy solo tiene datos de Superetes, octubre).
 - Revisar la ambigüedad de PDV marcada con ⚠️ en "PRIA campaña Yupi" (la mecánica dice 40 puntas de góndola, la tabla de asignación suma 50).
-- Publicar en GitHub Pages (ver arriba).
+- Completar la mecánica, vigencia e inversión de "Pasto Aniversario Titán" y "Quincenazo de Café — Santander" (`r02`, `r04`): sus presentaciones de origen no tienen texto extraíble, solo imágenes.
+- Confirmar con el equipo regional si "Cierre de Brechas — Altillano" (`r01`) debe quedar como una sola iniciativa o separarse en sus 3 incentivos por cliente (Su Amigo, Donde Vicson, Manaba Merkafruver).

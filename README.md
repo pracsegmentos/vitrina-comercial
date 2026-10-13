@@ -87,7 +87,7 @@ El sitio ya está publicado en `https://pracsegmentos.github.io/vitrina-comercia
 
 ## Pendiente
 
-- Cargar iniciativas de Minimercados y Droguería/Masivo/Bienestar (hoy solo tiene datos de Superetes, octubre).
+- Cargar iniciativas de Droguería/Masivo/Bienestar (hoy solo tiene datos de Superetes y Minimercados, octubre).
 - Revisar la ambigüedad de PDV marcada con ⚠️ en "PRIA campaña Yupi" (la mecánica dice 40 puntas de góndola, la tabla de asignación suma 50).
-- Completar la mecánica, vigencia e inversión de "Pasto Aniversario Titán" y "Quincenazo de Café — Santander" (`r02`, `r04`): sus presentaciones de origen no tienen texto extraíble, solo imágenes.
+- Completar mecánica, vigencia e inversión de las iniciativas cuya presentación de origen no tiene texto extraíble (solo imágenes): `r02` (Pasto Aniversario Titán), `r04` (Quincenazo de Café — Santander), `m02` (Reto 50-100 Antioquia), `m04` (Mes del Desatrace Ahorramax Bogotá), `m05` (Septiembrazo MM Tolima).
 - Confirmar con el equipo regional si "Cierre de Brechas — Altillano" (`r01`) debe quedar como una sola iniciativa o separarse en sus 3 incentivos por cliente (Su Amigo, Donde Vicson, Manaba Merkafruver).

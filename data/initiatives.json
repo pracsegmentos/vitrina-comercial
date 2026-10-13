@@ -662,5 +662,106 @@
     "tieneInversion": true,
     "inversionMonto": null,
     "inversionTexto": "Alcance: 200 puntos de venta. Inversión por PDV: $400.000 (exhibidor/mueble) o $500.000 (puntas intercambiables), según el tipo asignado; no se consolida un total único en la presentación."
+  },
+  {
+    "id": "m01",
+    "segmento": "minimercados",
+    "creador": "trade",
+    "tipo": "push",
+    "nombre": "Puntas del Año",
+    "resumen": "Mecánica: garantizar la presencia contundente de las marcas favoritas en los principales PDV Minimercados mediante un espacio adicional (punta de góndola) colonizado por un periodo determinado, alcance nacional. Condiciones para pago: estrategia de exhibición soportada en registro fotográfico de implementación, cumplimiento de la ejecución presupuestal total del PDV, reporte de implementación dentro de plazo (15 de septiembre), y contar con snackero de cualquier tipo registrado en el punto de venta. Las exhibiciones no pueden sustituir las naturales del cliente ni reemplazar el lineal. Pago vía transferencia directa o código facturador de agentes comerciales (S1003919, el mismo con el que se paga \"puntas del año\").",
+    "vigenciaTexto": "Enero - Noviembre 2026 (vigencia inicial de 11 meses)",
+    "meses": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11
+    ],
+    "anio": 2026,
+    "link": "https://docs.google.com/presentation/d/1mRfIivGq0dPr91VUKPH8KQbZ9rkLAGd3eXRFP8ntweo/edit?usp=sharing",
+    "imagen": null,
+    "tieneInversion": true,
+    "inversionMonto": null,
+    "inversionTexto": "$200.000 + IVA mensual por PDV (valor negociado). Del total, $100.000 se paga por montar foto + venta mínima $300.000, y $100.000 adicionales si el PDV cumple el 100% del presupuesto — $200.000 por PDV que cumpla ambas condiciones. No se consolida un total nacional único en la presentación."
+  },
+  {
+    "id": "m02",
+    "segmento": "minimercados",
+    "creador": "regional",
+    "tipo": "na",
+    "nombre": "Reto 50-100 — Antioquia (Superetes y Minimercados)",
+    "resumen": "Reto de cumplimiento regional para Antioquia, con alcance en Superetes y Minimercados. La presentación de origen no tiene texto extraíble (solo imágenes). Pendiente completar mecánica, vigencia e inversión con el equipo regional.",
+    "vigenciaTexto": "Octubre (según título; sin más detalle)",
+    "meses": [
+      10
+    ],
+    "anio": 2026,
+    "link": "https://docs.google.com/presentation/d/1kvA4o98LeexmRu6stpqLcXFv47W4hL2EQHYeMJhmT_w/edit?usp=sharing",
+    "imagen": null,
+    "tieneInversion": false,
+    "inversionMonto": null,
+    "inversionTexto": ""
+  },
+  {
+    "id": "m03",
+    "segmento": "minimercados",
+    "creador": "trade",
+    "tipo": "push_pull",
+    "nombre": "IC One Nutresa MM — Octubre (redención en noviembre)",
+    "resumen": "Activación en 261 Minimercados por cumplimiento del presupuesto de las marcas Jet y Zenú CF en octubre: incentivo a shopper de 30 unidades de Chocolatina Jumbo x35g (cumplimiento 100%-104,9%) o 40 unidades (cumplimiento ≥105%). Adicionalmente, en noviembre, por compras iguales o superiores a $15.000 en las marcas participantes y presentando la tirilla de pago en caja, el shopper se lleva gratis una Chocolatina Jumbo x35g (salida varia asumida por Comercial Nutresa).",
+    "vigenciaTexto": "Octubre (cumplimiento) - Noviembre (redención a shopper)",
+    "meses": [
+      10,
+      11
+    ],
+    "anio": 2026,
+    "link": "https://docs.google.com/presentation/d/1YGb_By4fYP9UGP_NJqxzKtXCMew1CyzLGqBcmENrgyk/edit?usp=sharing",
+    "imagen": null,
+    "tieneInversion": true,
+    "inversionMonto": null,
+    "inversionTexto": "261 Minimercados participantes. Incentivo en unidades de producto (Chocolatina Jumbo x35g), no en monto fijo; no se consolida un total único en la presentación."
+  },
+  {
+    "id": "m04",
+    "segmento": "minimercados",
+    "creador": "regional",
+    "tipo": "na",
+    "nombre": "Mes del Desatrace — Especial Ahorramax (Bogotá)",
+    "resumen": "Iniciativa regional de Bogotá vinculada al cliente Ahorramax (\"Mes del Desatrace\"). La presentación de origen no tiene texto extraíble (solo imágenes). Pendiente completar mecánica, vigencia e inversión con el equipo regional.",
+    "vigenciaTexto": "Octubre (según título; sin más detalle)",
+    "meses": [
+      10
+    ],
+    "anio": 2026,
+    "link": "https://docs.google.com/presentation/d/1uXEDiYHni9Q7lpYYx1HkS5UU_kgGnFzJDsHBMQzMtuM/edit?usp=sharing",
+    "imagen": null,
+    "tieneInversion": false,
+    "inversionMonto": null,
+    "inversionTexto": ""
+  },
+  {
+    "id": "m05",
+    "segmento": "minimercados",
+    "creador": "regional",
+    "tipo": "na",
+    "nombre": "Septiembrazo MM — Tolima",
+    "resumen": "Iniciativa regional de Tolima para el canal Minimercados (\"Septiembrazo MM\"). La presentación de origen prácticamente no tiene texto extraíble. Pendiente completar mecánica, vigencia e inversión con el equipo regional.",
+    "vigenciaTexto": "Septiembre (según título \"Septiembrazo\"; sin más detalle)",
+    "meses": [
+      9
+    ],
+    "anio": 2026,
+    "link": "https://docs.google.com/presentation/d/1hrNBFhG3Aqva0vCLayCV8rpsH3EKYbl2m7d3qxm4rSY/edit?usp=sharing",
+    "imagen": null,
+    "tieneInversion": false,
+    "inversionMonto": null,
+    "inversionTexto": ""
   }
 ]

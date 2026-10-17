@@ -894,5 +894,96 @@
     "tieneInversion": true,
     "inversionMonto": null,
     "inversionTexto": "Elemento exhibible aspiracional por PDV (torre de sonido Samsung de referencia). No se consolida un monto total en la presentación."
+  },
+  {
+    "id": "t31",
+    "segmento": "superetes",
+    "creador": "trade",
+    "tipo": "pull",
+    "nombre": "Bombazo Cafetero — Together (Sello Rojo / Colcafé)",
+    "resumen": "Bolsa de descuento POS del 15% para Autoservicios (Superetes y Cadenas Regionales) en las marcas Sello Rojo, La Bastilla y Colcafé (\"Together\"). Cada jefe de ventas recibe, por cliente seleccionado, una bolsa de descuentos máxima a gestionar en punto de venta, decidiendo en qué quincenas/días participar; cada activación debe derivar en una compra posterior al descuento. Mecánica: gritar precios (antes/después, ej. $22.200 → $18.900), sacar inventario a piso de venta y exhibiciones adicionales. Liquidación: Nota Crédito para Sello Rojo y Colcafé; Factura para La Bastilla (aunque el Bombazo Cafetero de La Bastilla NO aplica en octubre). Requiere foto de la exhibición y de la marcación de precio (antes/ahora) para aprobar el pago; se liquida el mes vencido. El programa completo corre en 2 oleadas a lo largo de 8 meses de 2026; esta carga corresponde a la oleada de octubre.",
+    "vigenciaTexto": "Octubre",
+    "meses": [
+      10
+    ],
+    "anio": 2026,
+    "link": "https://drive.google.com/file/d/1kwMqOxuHWtnFMNV3OPLflsJiv1MHolY2/view?usp=sharing",
+    "imagen": null,
+    "tieneInversion": true,
+    "inversionMonto": null,
+    "inversionTexto": "Bolsa total del programa: $199,4M (99 clientes), repartida en 3 oleadas de asignación ($118,7M, $40,1M y $40,6M por mes). ⚠️ La bolsa se comparte entre Cadenas Regionales y Superetes sin desglose exacto en $; por número de clientes (Nits), Superetes representa 44 de los 99 clientes totales (13+12+19 Nits en las 3 oleadas) — el monto exacto atribuible solo a Superetes no se puede calcular con la información disponible."
+  },
+  {
+    "id": "t32",
+    "segmento": "superetes",
+    "creador": "trade",
+    "tipo": "push",
+    "nombre": "Plan CAA Autoservicios — Combo Ducales/Saltín Rojo",
+    "resumen": "El cliente debe comprar mínimo 1 combo CAA (10 cajas de Ducales TC x4, valor $1.962.857, o 15 cajas de Saltín Rojo TC x6, valor $2.575.440) y recibe un recurso de $200.000 para exhibiciones fuera del lineal. El recurso se paga vía Nota Crédito; al legalizar debe adjuntarse la factura de compra del combo CAA para autorizar el pago.",
+    "vigenciaTexto": "Octubre",
+    "meses": [
+      10
+    ],
+    "anio": 2026,
+    "link": "https://drive.google.com/file/d/1ZxK61A10LuGkJFfkkR64PNl2Q0ajteQy/view?usp=sharing",
+    "imagen": null,
+    "tieneInversion": true,
+    "inversionMonto": 200000,
+    "inversionTexto": "$200.000 por cliente que compre el combo CAA (Ducales TC x4 o Saltín Rojo TC x6), para exhibiciones fuera del lineal. No se indica cantidad total de clientes/PDV en el documento."
+  },
+  {
+    "id": "t33",
+    "segmento": "superetes",
+    "creador": "trade",
+    "tipo": "pull",
+    "nombre": "Rizadas Mindo — Descuento POS",
+    "resumen": "Descuento POS en las referencias Rizadas Mindo 36gx8x6AS y 105gx20AS (sin sellos), aplicable en Superetes y Cadenas Regionales, durante 4 ventanas de 16 días en octubre-noviembre (9-12, 16-19, 23-26 oct y 30 oct-2 nov). Por cada display facturado, se lleva otro gratis (aplica también a Mayoristas). Legalización vía Nota Crédito. ⚠️ El documento menciona tanto 25% como 35% de descuento para fechas prácticamente iguales; confirmar con el equipo cuál aplica o si son dos olas distintas.",
+    "vigenciaTexto": "9 de octubre - 2 de noviembre (4 ventanas de 16 días)",
+    "meses": [
+      10,
+      11
+    ],
+    "anio": 2026,
+    "link": "https://drive.google.com/file/d/1NZOVjlcJeGgAwraJA8Sq9Xpqs0j1m9Dk/view?usp=sharing",
+    "imagen": null,
+    "tieneInversion": true,
+    "inversionMonto": null,
+    "inversionTexto": "Descuento POS del 25% o 35% (según la sección del documento) sobre PVP, más mecánica de display gratis por cada display facturado. No se especifica monto total ni cantidad de PDV."
+  },
+  {
+    "id": "t34",
+    "segmento": "superetes",
+    "creador": "trade",
+    "tipo": "pull",
+    "nombre": "Tosti Nachos Queso — Descuento POS 25%",
+    "resumen": "Descuento POS del 25% en todas las referencias de Tosti Nachos Queso (105gr, 110gr, 150gr/170gr, 150gr/160gr) y en la referencia Divertida de 12 paquetes x231gr, alcance nacional. Legalización vía Nota Crédito.",
+    "vigenciaTexto": "14 - 17 de octubre",
+    "meses": [
+      10
+    ],
+    "anio": 2026,
+    "link": "https://drive.google.com/file/d/1NZOVjlcJeGgAwraJA8Sq9Xpqs0j1m9Dk/view?usp=sharing",
+    "imagen": null,
+    "tieneInversion": true,
+    "inversionMonto": null,
+    "inversionTexto": "Descuento POS del 25% sobre PVP. No se especifica monto total ni cantidad de PDV en la presentación."
+  },
+  {
+    "id": "t35",
+    "segmento": "superetes",
+    "creador": "trade",
+    "tipo": "push",
+    "nombre": "Combos Superetes — Profundidad y Siembra",
+    "resumen": "Dos combos de surtido infaltable (Rizadas, Golpe, Tosti, Yupis, Palomitas, Tozinetas) por valor de lista $500.000, dirigidos a clientes Superetes, 500 combos disponibles por código hasta agotar inventario. Profundidad (clientes existentes): descuento del 15%, precio final $425.000. Siembra (clientes nuevos): descuento del 25%, precio final $375.000. Alcance nacional.",
+    "vigenciaTexto": "Octubre",
+    "meses": [
+      10
+    ],
+    "anio": 2026,
+    "link": "https://drive.google.com/file/d/1NZOVjlcJeGgAwraJA8Sq9Xpqs0j1m9Dk/view?usp=sharing",
+    "imagen": null,
+    "tieneInversion": true,
+    "inversionMonto": null,
+    "inversionTexto": "Profundidad: descuento de $75.000 por combo (15% sobre $500.000), hasta 500 combos. Siembra: descuento de $125.000 por combo (25% sobre $500.000), hasta 500 combos para clientes nuevos. No se consolida una inversión total única."
   }
 ]

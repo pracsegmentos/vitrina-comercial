@@ -12,13 +12,15 @@
 </head>
 <body>
   <header class="topbar">
-    <div class="brand" style="cursor:default;">
-      <img class="brand-logo" src="images/logo-nutresa.png" alt="Nutresa">
-      <span class="brand-div"></span>
-      <span><span class="brand-name">Administrar</span><br><span class="brand-sub">Vitrina Comercial</span></span>
+    <div class="topbar-inner">
+      <div class="brand" style="cursor:default;">
+        <img class="brand-logo" src="images/logo-nutresa.png" alt="Nutresa">
+        <span class="brand-div"></span>
+        <span><span class="brand-name">Administrar</span><br><span class="brand-sub">Vitrina Comercial</span></span>
+      </div>
+      <div class="topbar-spacer"></div>
+      <a class="admin-link" href="index.html">Ver catálogo público</a>
     </div>
-    <div class="topbar-spacer"></div>
-    <a class="back-btn" href="index.html">Ver catálogo público</a>
   </header>
 
   <main class="admin-wrap">
@@ -64,7 +66,8 @@
                 <div class="chip-choice" data-field="segmento">
                   <button type="button" data-value="minimercados">Minimercados</button>
                   <button type="button" data-value="superetes">Superetes</button>
-                  <button type="button" data-value="drogueria">Droguería/Masivo/Bienestar</button>
+                  <button type="button" data-value="drogueria">Bienestar/Droguería</button>
+                  <button type="button" data-value="masivo">Masivo</button>
                 </div>
               </div>
               <div>
@@ -72,7 +75,7 @@
                 <div class="chip-choice" data-field="creador">
                   <button type="button" data-value="trade">Trade</button>
                   <button type="button" data-value="negocio">Negocios</button>
-                  <button type="button" data-value="regional">Regional</button>
+                  <button type="button" data-value="regional">Regionales</button>
                 </div>
               </div>
               <div>
@@ -80,7 +83,7 @@
                 <div class="chip-choice" data-field="tipo">
                   <button type="button" data-value="push">Push</button>
                   <button type="button" data-value="pull">Pull</button>
-                  <button type="button" data-value="push_pull">Push/Pull</button>
+                  <button type="button" data-value="push_pull">Ambas</button>
                   <button type="button" data-value="na">N/A</button>
                 </div>
               </div>

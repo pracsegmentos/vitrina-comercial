@@ -2,28 +2,36 @@
 const SEGMENTS = [
   { id:'minimercados', label:'Minimercados', color:'var(--negocio)',
     icon:'<path d="M4 10h24l-2 15a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2L4 10Z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="M9 10V8a7 7 0 0 1 14 0v2" fill="none" stroke="currentColor" stroke-width="2"/><path d="M11 15v4M21 15v4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>' },
-  { id:'superetes', label:'Superetes', color:'var(--accent)',
+  { id:'superetes', label:'Superetes', color:'var(--trade)',
     icon:'<path d="M4 9h24l-1.6 15.2A2 2 0 0 1 24.4 26H9.6a2 2 0 0 1-2-1.8L6 9Z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="M4 9l2-4h18l2 4" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="M12 13v3M16 13v3M20 13v3" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>' },
-  { id:'drogueria', label:'Droguería / Masivo / Bienestar', color:'var(--regional)',
+  { id:'drogueria', label:'Bienestar / Droguería', color:'var(--regional)',
     icon:'<path d="M12 4h8a2 2 0 0 1 2 2v3h3a2 2 0 0 1 2 2v13a2 2 0 0 1-2 2H9a2 2 0 0 1-2-2V11a2 2 0 0 1 2-2h3V6a2 2 0 0 1 2-2Z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="M14 16h4M16 14v4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>' },
+  { id:'masivo', label:'Masivo', color:'var(--nutresa-light)',
+    icon:'<path d="M5 12l10-5 10 5-10 5-10-5Z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="M5 12v9l10 5 10-5v-9" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="M15 17v9" stroke="currentColor" stroke-width="2"/>' },
 ];
+const TODOS_TAB = { id:'todos', label:'Todos los segmentos', color:'var(--nutresa-dark)',
+  icon:'<rect x="5" y="5" width="8" height="8" rx="1.5" fill="none" stroke="currentColor" stroke-width="2"/><rect x="17" y="5" width="8" height="8" rx="1.5" fill="none" stroke="currentColor" stroke-width="2"/><rect x="5" y="17" width="8" height="8" rx="1.5" fill="none" stroke="currentColor" stroke-width="2"/><rect x="17" y="17" width="8" height="8" rx="1.5" fill="none" stroke="currentColor" stroke-width="2"/>' };
+
 const CREADORES = [
   { id:'trade', label:'Trade', color:'var(--trade)', bg:'var(--trade-bg)' },
   { id:'negocio', label:'Negocios', color:'var(--negocio)', bg:'var(--negocio-bg)' },
-  { id:'regional', label:'Regional', color:'var(--regional)', bg:'var(--regional-bg)' },
+  { id:'regional', label:'Regionales', color:'var(--regional)', bg:'var(--regional-bg)' },
 ];
 const TIPOS = {
-  push:     { label:'Push',      color:'var(--push)',     bg:'var(--push-bg)' },
-  pull:     { label:'Pull',      color:'var(--pull)',     bg:'var(--pull-bg)' },
-  push_pull:{ label:'Push/Pull', color:'var(--pushpull)', bg:'var(--pushpull-bg)' },
-  na:       { label:'N/A',       color:'var(--na)',       bg:'var(--na-bg)' },
+  push:     { label:'Push',  color:'var(--push)',  bg:'var(--push-bg)' },
+  pull:     { label:'Pull',  color:'var(--pull)',  bg:'var(--pull-bg)' },
+  push_pull:{ label:'Ambas', color:'var(--ambas)', bg:'var(--ambas-bg)' },
+  na:       { label:'N/A',   color:'var(--na)',    bg:'var(--na-bg)' },
+};
+const ESTADOS = {
+  activa:     { label:'Activa',     color:'var(--status-activa)',     bg:'var(--status-activa-bg)' },
+  proxima:    { label:'Próxima',    color:'var(--status-proxima)',    bg:'var(--status-proxima-bg)' },
+  finalizada: { label:'Finalizada', color:'var(--status-finalizada)', bg:'var(--status-finalizada-bg)' },
 };
 const MESES = ['Ene','Feb','Mar','Abr','May','Jun','Jul','Ago','Sep','Oct','Nov','Dic'];
 
 const ICONS = {
   search:'<svg viewBox="0 0 20 20" fill="none"><circle cx="9" cy="9" r="6" stroke="currentColor" stroke-width="2"/><path d="m18 18-4.3-4.3" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>',
-  arrow:'<svg viewBox="0 0 20 20" fill="none"><path d="M4 10h12M11 5l5 5-5 5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>',
-  back:'<svg viewBox="0 0 20 20" fill="none"><path d="M16 10H4M9 5l-5 5 5 5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>',
   close:'<svg viewBox="0 0 20 20" fill="none"><path d="m5 5 10 10M15 5 5 15" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>',
   calendar:'<svg viewBox="0 0 20 20" fill="none"><rect x="3" y="4" width="14" height="13" rx="2" stroke="currentColor" stroke-width="1.6"/><path d="M3 8h14M7 2.5v3M13 2.5v3" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>',
   coin:'<svg viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="7" stroke="currentColor" stroke-width="1.6"/><path d="M10 6.5v7M7.8 13v.3c0 1 .9 1.7 2.2 1.7s2.2-.6 2.2-1.6c0-2.3-4.4-1.4-4.4-3.7 0-1 1-1.6 2.2-1.6s2 .6 2.2 1.5" stroke="currentColor" stroke-width="1.3" stroke-linecap="round"/></svg>',
@@ -36,8 +44,7 @@ const ICONS = {
 const S = {
   booted:false, loadError:false,
   docs:[],
-  view:'home',
-  segment:null,
+  tab:'todos',
   filters:{ search:'', creador:'all', mes:'all', anio:'all' },
   detailId:null,
 };
@@ -64,11 +71,21 @@ function formatMeses(arr, anio){
   const labels=sorted.map(m=>MESES[m-1]);
   return labels.join(' · ') + (anio ? ' '+anio : '');
 }
+function getEstado(d){
+  if(!d.anio || !d.meses || !d.meses.length) return null;
+  const now=new Date(), y=now.getFullYear(), m=now.getMonth()+1;
+  const minM=Math.min(...d.meses), maxM=Math.max(...d.meses);
+  if(d.anio < y || (d.anio===y && maxM < m)) return 'finalizada';
+  if(d.anio > y || (d.anio===y && minM > m)) return 'proxima';
+  return 'activa';
+}
 function segmentOf(id){ return SEGMENTS.find(s=>s.id===id); }
 function creadorOf(id){ return CREADORES.find(c=>c.id===id) || CREADORES[0]; }
 function tipoOf(id){ return TIPOS[id] || TIPOS.na; }
+function tabConfig(id){ return id==='todos' ? TODOS_TAB : (segmentOf(id) || TODOS_TAB); }
 
 function docsForSegment(segId){ return S.docs.filter(d=>d.segmento===segId); }
+function docsForTab(tabId){ return tabId==='todos' ? S.docs : docsForSegment(tabId); }
 function applyFilters(list){
   const f=S.filters;
   return list.filter(d=>{
@@ -87,16 +104,14 @@ function applyFilters(list){
 function render(){
   const app=document.getElementById('app');
   app.innerHTML='';
-  app.appendChild(renderTopbar());
+  app.appendChild(renderHeader());
   const main=el('main');
   if(!S.booted){
     main.appendChild(el('div',{class:'boot'}, S.loadError
       ? 'No se pudo cargar data/initiatives.json.'
       : '<div class="spinner"></div><span>Cargando iniciativas…</span>'));
-  } else if(S.view==='home'){
-    main.appendChild(renderHome());
   } else {
-    main.appendChild(renderSegmentView());
+    main.appendChild(renderBoard());
   }
   app.appendChild(main);
 
@@ -109,118 +124,48 @@ function render(){
   if(S.detailId){ app.appendChild(renderDetailDrawer()); }
 }
 
-function renderTopbar(){
-  const bar=el('div',{class:'topbar'});
+function renderHeader(){
+  const wrap=el('div',{class:'topbar'});
+
+  const inner=el('div',{class:'topbar-inner'});
   const brand=el('button',{class:'brand'},
     `<img class="brand-logo" src="images/logo-nutresa.png" alt="Nutresa">
      <span class="brand-div"></span>
      <span><span class="brand-name">Vitrina Comercial</span><br><span class="brand-sub">Iniciativas por canal</span></span>`);
-  brand.addEventListener('click', goHome);
-  bar.appendChild(brand);
-  bar.appendChild(el('div',{class:'topbar-spacer'}));
-  if(S.view==='segment'){
-    const back=el('button',{class:'back-btn'}, ICONS.back+'<span>Todos los canales</span>');
-    back.addEventListener('click', goHome);
-    bar.appendChild(back);
-  }
-  return bar;
-}
+  brand.addEventListener('click', ()=>setTab('todos'));
+  inner.appendChild(brand);
+  inner.appendChild(el('div',{class:'topbar-spacer'}));
+  inner.appendChild(el('a',{class:'admin-link', href:'admin.html'}, ICONS.edit+'<span>Administrar</span>'));
+  wrap.appendChild(inner);
 
-/* ===================== render: home ===================== */
-const prefersReducedMotion = () => window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-
-function animateCount(elm, target){
-  if(prefersReducedMotion() || target===0){ elm.textContent=String(target); return; }
-  const start=performance.now(), dur=900;
-  function tick(now){
-    const t=Math.min(1,(now-start)/dur);
-    const eased=1-Math.pow(1-t,3);
-    elm.textContent=String(Math.round(eased*target));
-    if(t<1) requestAnimationFrame(tick);
-  }
-  requestAnimationFrame(tick);
-}
-
-function renderHome(){
-  const wrap=el('div',{class:'home'});
-
-  const totalDocs = S.docs.length;
-  const totalInv = S.docs.reduce((sum,d)=> sum + (typeof d.inversionMonto==='number' ? d.inversionMonto : 0), 0);
-  const activeChannels = SEGMENTS.filter(s=>docsForSegment(s.id).length>0).length;
-
-  const hero=el('div',{class:'home-hero'});
-  const bgIcons=el('div',{class:'home-hero-icons', 'aria-hidden':'true'});
-  bgIcons.innerHTML=`
-    <svg viewBox="0 0 30 30" fill="none" style="width:170px;height:170px;top:-30px;right:6%;transform:rotate(-12deg);" stroke-width="1.3">${SEGMENTS[1].icon}</svg>
-    <svg viewBox="0 0 30 30" fill="none" style="width:120px;height:120px;bottom:-20px;right:28%;transform:rotate(10deg);" stroke-width="1.3">${SEGMENTS[2].icon}</svg>
-    <svg viewBox="0 0 30 30" fill="none" style="width:130px;height:130px;top:30%;left:-30px;transform:rotate(8deg);" stroke-width="1.3">${SEGMENTS[0].icon}</svg>
-  `;
-  hero.appendChild(bgIcons);
-
-  const inner=el('div',{class:'home-hero-inner'});
-  inner.innerHTML=`
-    <div class="home-eyebrow"><span class="rule"></span>Iniciativas comerciales</div>
-    <h1 class="home-title">Todo lo que está corriendo <span class="accent-text">en el punto de venta</span>, en un solo lugar.</h1>
-    <p class="home-desc">Elige un canal para ver sus iniciativas vigentes, filtrarlas por quién las creó, mes o año, y revisar inversión, vigencia y material de cada una — sin ir a buscarlo en el Word.</p>
-    <div class="home-stats">
-      <div class="stat"><div class="stat-value" data-count="${totalDocs}">0</div><div class="stat-label">Iniciativas cargadas</div></div>
-      <div class="stat"><div class="stat-value" data-count="${activeChannels}">0</div><div class="stat-label">de ${SEGMENTS.length} canales activos</div></div>
-      <div class="stat"><div class="stat-value">${formatCOP(totalInv)||'$0'}</div><div class="stat-label">Inversión total registrada</div></div>
-    </div>
-  `;
-  hero.appendChild(inner);
-  wrap.appendChild(hero);
-
-  const grid=el('div',{class:'segment-grid'});
-  SEGMENTS.forEach((seg,i)=>{
-    const list=docsForSegment(seg.id);
-    const card=el('button',{class:'segment-card', style:`--seg-color:${seg.color}; --i:${i};`});
-    card.innerHTML=`
-      <div class="segment-tab"></div>
-      <svg class="segment-icon" viewBox="0 0 30 30" fill="none">${seg.icon}</svg>
-      <div class="segment-meta"><div class="segment-name">${esc(seg.label)}</div></div>
-      ${list.length
-        ? `<div class="segment-badge"><span class="segment-badge-value">${list.length}</span><span class="segment-badge-label">iniciativa${list.length===1?'':'s'} cargada${list.length===1?'':'s'}</span></div>`
-        : `<span class="segment-empty-tag">Próximamente</span>`}
-      <div class="segment-cta">Ver iniciativas ${ICONS.arrow}</div>
-    `;
-    card.addEventListener('click', ()=>openSegment(seg.id));
-    if(!prefersReducedMotion()){
-      card.addEventListener('mousemove', (e)=>{
-        const r=card.getBoundingClientRect();
-        const px=(e.clientX-r.left)/r.width - .5;
-        card.style.setProperty('--tilt', (px*2.2).toFixed(2)+'deg');
-      });
-      card.addEventListener('mouseleave', ()=> card.style.setProperty('--tilt','0deg'));
-    }
-    grid.appendChild(card);
+  const tabs=el('div',{class:'tabbar'});
+  [TODOS_TAB, ...SEGMENTS].forEach(t=>{
+    const count = docsForTab(t.id).length;
+    const tab=el('button',{class:'tab'}, `<svg viewBox="0 0 30 30" fill="none">${t.icon}</svg><span>${esc(t.label)}</span><span class="tab-count">${count}</span>`);
+    tab.setAttribute('data-active', S.tab===t.id);
+    tab.addEventListener('click', ()=>setTab(t.id));
+    tabs.appendChild(tab);
   });
-  wrap.appendChild(grid);
-
-  requestAnimationFrame(()=>{
-    wrap.querySelectorAll('.stat-value[data-count]').forEach(elm=>{
-      animateCount(elm, Number(elm.dataset.count));
-    });
-  });
-
+  wrap.appendChild(tabs);
   return wrap;
 }
 
-/* ===================== render: segment view ===================== */
-function renderSegmentView(){
-  const seg=segmentOf(S.segment);
-  const all=docsForSegment(seg.id);
+/* ===================== render: board ===================== */
+function renderBoard(){
+  const cfg=tabConfig(S.tab);
+  const all=docsForTab(S.tab);
   const filtered=applyFilters(all);
 
   const wrap=el('div',{class:'segview'});
   const totalInv = all.reduce((sum,d)=> sum + (typeof d.inversionMonto==='number' ? d.inversionMonto : 0), 0);
   const conInv = all.filter(d=>d.tieneInversion).length;
+  const activas = all.filter(d=>getEstado(d)==='activa').length;
 
   const head=el('div',{class:'segview-head'});
   head.innerHTML=`
     <div>
-      <h2 class="segview-title" style="color:${seg.color}">${esc(seg.label)}</h2>
-      <div class="segview-sub">${all.length} iniciativa${all.length===1?'':'s'} registrada${all.length===1?'':'s'} · ${conInv} con inversión tangible</div>
+      <h2 class="segview-title" style="--seg-color:${cfg.color}"><svg viewBox="0 0 30 30" fill="none">${cfg.icon}</svg>${esc(cfg.label)}</h2>
+      <div class="segview-sub">${all.length} iniciativa${all.length===1?'':'s'} registrada${all.length===1?'':'s'} · ${activas} activa${activas===1?'':'s'} ahora · ${conInv} con inversión tangible</div>
     </div>
     <div class="kpis">
       <div class="kpi"><div class="kpi-label">Iniciativas</div><div class="kpi-value">${all.length}</div></div>
@@ -228,11 +173,11 @@ function renderSegmentView(){
     </div>
   `;
   wrap.appendChild(head);
-  wrap.appendChild(renderToolbar(seg));
+  wrap.appendChild(renderToolbar());
 
   if(!all.length){
     wrap.appendChild(el('div',{class:'empty-state'},
-      `${ICONS.empty}<h3>Aún no hay iniciativas en ${esc(seg.label)}</h3>
+      `${ICONS.empty}<h3>Aún no hay iniciativas en ${esc(cfg.label)}</h3>
        <p>Cuando el equipo cargue información para este canal aparecerá aquí, organizada por quién la creó.</p>
        <p><a href="admin.html" class="link-btn" style="margin-top:10px;">${ICONS.edit} Agregar la primera iniciativa</a></p>`));
     return wrap;
@@ -250,7 +195,7 @@ function renderSegmentView(){
     if(!laneDocs.length){
       cardsWrap.appendChild(el('div',{class:'lane-empty'}, 'Sin coincidencias'));
     } else {
-      laneDocs.forEach(d=> cardsWrap.appendChild(renderCard(d)));
+      laneDocs.forEach(d=> cardsWrap.appendChild(renderCard(d, {showSegment: S.tab==='todos'})));
     }
     lane.appendChild(cardsWrap);
     board.appendChild(lane);
@@ -259,7 +204,7 @@ function renderSegmentView(){
   return wrap;
 }
 
-function renderToolbar(seg){
+function renderToolbar(){
   const bar=el('div',{class:'toolbar'});
 
   const search=el('div',{class:'search-box'});
@@ -296,7 +241,7 @@ function renderToolbar(seg){
   mesSel.addEventListener('change', e=>{ S.filters.mes=e.target.value; render(); });
   bar.appendChild(mesSel);
 
-  const years=Array.from(new Set(docsForSegment(seg.id).map(d=>d.anio).filter(Boolean))).sort();
+  const years=Array.from(new Set(docsForTab(S.tab).map(d=>d.anio).filter(Boolean))).sort();
   const anioSel=el('select',{class:'selectbox'});
   anioSel.innerHTML='<option value="all">Todos los años</option>'+years.map(y=>`<option value="${y}">${y}</option>`).join('');
   anioSel.value=S.filters.anio;
@@ -304,18 +249,27 @@ function renderToolbar(seg){
   bar.appendChild(anioSel);
 
   bar.appendChild(el('div',{class:'toolbar-spacer'}));
-  const addLink=el('a',{class:'btn btn-ghost', href:'admin.html'}, ICONS.edit+'Administrar');
+  const addLink=el('a',{class:'btn btn-ghost', href:'admin.html'}, ICONS.edit+'Nueva iniciativa');
   bar.appendChild(addLink);
   return bar;
 }
 
-function renderCard(d){
+function renderCard(d, opts){
+  opts = opts || {};
   const tipo=tipoOf(d.tipo);
+  const estadoKey=getEstado(d);
+  const estado=estadoKey ? ESTADOS[estadoKey] : null;
+  const seg=segmentOf(d.segmento);
   const card=el('button',{class:'card'});
   card.innerHTML=`
     <div class="card-top">
       <div class="card-name">${esc(d.nombre||'Sin nombre')}</div>
       <span class="badge" style="color:${tipo.color}; background:${tipo.bg}">${tipo.label}</span>
+    </div>
+    ${d.resumen ? `<div class="card-resumen">${esc(d.resumen)}</div>` : ''}
+    <div class="card-meta-row">
+      ${estado ? `<span class="status-dot" style="color:${estado.color}; background:${estado.bg}">${estado.label}</span>` : ''}
+      ${opts.showSegment && seg ? `<span class="seg-chip">${esc(seg.label)}</span>` : ''}
     </div>
     <div class="card-meta"><span>${ICONS.calendar}${esc(formatMeses(d.meses, d.anio))}</span></div>
     ${d.tieneInversion ? `<div class="card-meta inv-flag">${ICONS.coin} Inversión tangible${typeof d.inversionMonto==='number' ? ' · '+formatCOP(d.inversionMonto) : ''}</div>` : ''}
@@ -330,6 +284,7 @@ function renderDetailDrawer(){
   const wrap=el('div',{class:'drawer', 'data-open':'true'});
   if(!d){ return wrap; }
   const tipo=tipoOf(d.tipo); const cr=creadorOf(d.creador);
+  const estadoKey=getEstado(d); const estado=estadoKey ? ESTADOS[estadoKey] : null;
 
   const head=el('div',{class:'drawer-head'});
   head.innerHTML=`
@@ -337,6 +292,7 @@ function renderDetailDrawer(){
       <h3 style="font-size:18px; line-height:1.3;">${esc(d.nombre)}</h3>
       <div class="tagrow">
         <span class="chip" style="color:${tipo.color}; background:${tipo.bg}">${tipo.label}</span>
+        ${estado ? `<span class="chip" style="color:${estado.color}; background:${estado.bg}">${estado.label}</span>` : ''}
         <span class="chip" style="color:${cr.color}; background:${cr.bg}">${esc(cr.label)}</span>
         <span class="chip" style="color:var(--ink-dim); background:var(--surface-2)">${esc(segmentOf(d.segmento)?.label||'')}</span>
       </div>
@@ -383,8 +339,7 @@ function renderDetailDrawer(){
 }
 
 /* ===================== navigation ===================== */
-function goHome(){ S.view='home'; S.segment=null; S.filters={search:'',creador:'all',mes:'all',anio:'all'}; S.detailId=null; render(); }
-function openSegment(id){ S.view='segment'; S.segment=id; S.filters={search:'',creador:'all',mes:'all',anio:'all'}; render(); }
+function setTab(id){ S.tab=id; S.filters={search:'',creador:'all',mes:'all',anio:'all'}; S.detailId=null; render(); }
 function openDetail(id){ S.detailId=id; render(); }
 function closeDetail(){ S.detailId=null; render(); }
 

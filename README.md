@@ -1,6 +1,6 @@
 # Vitrina Comercial
 
-Catálogo visual de las iniciativas comerciales por canal (Minimercados, Superetes, Droguería/Masivo/Bienestar), pensado para ver rápido qué está corriendo, quién la creó (Trade, Negocios o Regional), su vigencia y su inversión — en reemplazo de ir a buscarlo en el Word/Excel de iniciativas.
+Catálogo visual de las iniciativas comerciales por canal (Minimercados, Superetes, Bienestar/Droguería, Masivo — más una pestaña "Todos los segmentos"), pensado para ver rápido qué está corriendo, quién la creó (Trade, Negocios o Regionales), su estado (Activa/Próxima/Finalizada), su vigencia y su inversión — en reemplazo de ir a buscarlo en el Word/Excel de iniciativas. Sigue la guía de marca Nutresa (verde institucional, verde medio, lima, amarillo).
 
 ## Cómo funciona
 
@@ -58,9 +58,10 @@ Copia este bloque, pégalo dentro de los corchetes `[ ]` de `data/initiatives.js
 
 Notas:
 - `id` debe ser único por iniciativa.
-- `segmento`: `minimercados`, `superetes` o `drogueria`.
+- `segmento`: `minimercados`, `superetes`, `drogueria` (Bienestar/Droguería) o `masivo`.
 - `creador`: `trade`, `negocio` o `regional`.
-- `tipo`: `push`, `pull`, `push_pull` o `na`.
+- `tipo`: `push`, `pull`, `push_pull` (se muestra como "Ambas") o `na`.
+- El estado (Activa/Próxima/Finalizada) se calcula solo, comparando la fecha de hoy contra `meses`+`anio` — no es un campo que se edite a mano.
 - `meses` es un arreglo con los números de los meses activos (1 = enero … 12 = diciembre); se usa para el filtro por mes.
 - Si no hay inversión tangible, deja `tieneInversion: false` y `inversionMonto: null`.
 - Si todavía no tienes imagen, deja `"imagen": null` (el sitio muestra un placeholder).
@@ -94,7 +95,7 @@ Cuando llega información de un mes nuevo (ej. noviembre) para un canal que ya t
 
 ## Pendiente
 
-- Cargar iniciativas de Droguería/Masivo/Bienestar (hoy solo tiene datos de Superetes y Minimercados, octubre-noviembre).
+- Cargar iniciativas de Bienestar/Droguería y Masivo (hoy solo tiene datos de Superetes y Minimercados, octubre-noviembre).
 - Revisar la ambigüedad de PDV marcada con ⚠️ en "PRIA campaña Yupi" (la mecánica dice 40 puntas de góndola, la tabla de asignación suma 50).
 - Completar mecánica, vigencia e inversión de las iniciativas cuya presentación de origen no tiene texto extraíble (solo imágenes): `r02` (Pasto Aniversario Titán), `r04` (Quincenazo de Café — Santander), `m02` (Reto 50-100 Antioquia), `m04` (Mes del Desatrace Ahorramax Bogotá), `m05` (Septiembrazo MM Tolima).
 - Confirmar con el equipo regional si "Cierre de Brechas — Altillano" (`r01`) debe quedar como una sola iniciativa o separarse en sus 3 incentivos por cliente (Su Amigo, Donde Vicson, Manaba Merkafruver).

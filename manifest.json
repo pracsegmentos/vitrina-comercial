@@ -1,7 +1,7 @@
 {
   "name": "Vitrina Comercial",
   "short_name": "Vitrina",
-  "description": "Catálogo de iniciativas comerciales por canal (Minimercados, Superetes, Bienestar/Droguería, Masivo)",
+  "description": "Catálogo de iniciativas comerciales por canal (Minimercados, Superetes, Droguería/Masivo/Bienestar)",
   "start_url": "./index.html",
   "scope": "./",
   "display": "standalone",

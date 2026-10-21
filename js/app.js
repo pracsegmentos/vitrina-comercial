@@ -1,10 +1,10 @@
 /* ===================== data & constants ===================== */
 const SEGMENTS = [
-  { id:'minimercados', label:'Minimercados', color:'var(--negocio)',
+  { id:'minimercados', label:'Minimercados', color:'var(--negocio)', bg:'var(--negocio-bg)',
     icon:'<path d="M4 10h24l-2 15a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2L4 10Z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="M9 10V8a7 7 0 0 1 14 0v2" fill="none" stroke="currentColor" stroke-width="2"/><path d="M11 15v4M21 15v4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>' },
-  { id:'superetes', label:'Superetes', color:'var(--trade)',
+  { id:'superetes', label:'Superetes', color:'var(--trade)', bg:'var(--trade-bg)',
     icon:'<path d="M4 9h24l-1.6 15.2A2 2 0 0 1 24.4 26H9.6a2 2 0 0 1-2-1.8L6 9Z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="M4 9l2-4h18l2 4" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="M12 13v3M16 13v3M20 13v3" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>' },
-  { id:'drogueria', label:'Droguería / Masivo / Bienestar', color:'var(--regional)',
+  { id:'drogueria', label:'Droguería / Masivo / Bienestar', color:'var(--regional)', bg:'var(--regional-bg)',
     icon:'<path d="M12 4h8a2 2 0 0 1 2 2v3h3a2 2 0 0 1 2 2v13a2 2 0 0 1-2 2H9a2 2 0 0 1-2-2V11a2 2 0 0 1 2-2h3V6a2 2 0 0 1 2-2Z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="M14 16h4M16 14v4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>' },
 ];
 const TODOS_TAB = { id:'todos', label:'Todos los segmentos', color:'var(--nutresa-dark)',
@@ -267,7 +267,7 @@ function renderCard(d, opts){
     ${d.resumen ? `<div class="card-resumen">${esc(d.resumen)}</div>` : ''}
     <div class="card-meta-row">
       ${estado ? `<span class="status-dot" style="color:${estado.color}; background:${estado.bg}">${estado.label}</span>` : ''}
-      ${opts.showSegment && seg ? `<span class="seg-chip">${esc(seg.label)}</span>` : ''}
+      ${opts.showSegment && seg ? `<span class="seg-chip" style="color:${seg.color}; background:${seg.bg}">${esc(seg.label)}</span>` : ''}
     </div>
     <div class="card-meta"><span>${ICONS.calendar}${esc(formatMeses(d.meses, d.anio))}</span></div>
     ${d.tieneInversion ? `<div class="card-meta inv-flag">${ICONS.coin} Inversión tangible${typeof d.inversionMonto==='number' ? ' · '+formatCOP(d.inversionMonto) : ''}</div>` : ''}
@@ -281,7 +281,7 @@ function renderDetailDrawer(){
   const d=S.docs.find(x=>x.id===S.detailId);
   const wrap=el('div',{class:'drawer', 'data-open':'true'});
   if(!d){ return wrap; }
-  const tipo=tipoOf(d.tipo); const cr=creadorOf(d.creador);
+  const tipo=tipoOf(d.tipo); const cr=creadorOf(d.creador); const seg=segmentOf(d.segmento);
   const estadoKey=getEstado(d); const estado=estadoKey ? ESTADOS[estadoKey] : null;
 
   const head=el('div',{class:'drawer-head'});
@@ -292,7 +292,7 @@ function renderDetailDrawer(){
         <span class="chip" style="color:${tipo.color}; background:${tipo.bg}">${tipo.label}</span>
         ${estado ? `<span class="chip" style="color:${estado.color}; background:${estado.bg}">${estado.label}</span>` : ''}
         <span class="chip" style="color:${cr.color}; background:${cr.bg}">${esc(cr.label)}</span>
-        <span class="chip" style="color:var(--ink-dim); background:var(--surface-2)">${esc(segmentOf(d.segmento)?.label||'')}</span>
+        ${seg ? `<span class="chip" style="color:${seg.color}; background:${seg.bg}">${esc(seg.label)}</span>` : ''}
       </div>
     </div>`;
   const closeBtn=el('button',{class:'drawer-close'}, ICONS.close);

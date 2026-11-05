@@ -989,7 +989,7 @@
   {
     "id": "m07",
     "segmento": "minimercados",
-    "creador": "negocio",
+    "creador": "trade",
     "tipo": "push",
     "nombre": "Combo Trade Sello Rojo 110g — CMU.11 Sello Rojo fte PE",
     "resumen": "Oferta PRE de noviembre (\"Ofertas Trade\"/Plan DN) para Café Sello Rojo 110g: 8% de descuento sobre precio de lista, 600 unidades asignadas. Segmento: TD, MM. Región: Antioquia.",
@@ -1007,7 +1007,7 @@
   {
     "id": "m08",
     "segmento": "minimercados",
-    "creador": "negocio",
+    "creador": "trade",
     "tipo": "push",
     "nombre": "Combo Trade Sello Rojo 110g — CMU.13 Sello Rojo fte PE",
     "resumen": "Oferta PRE de noviembre para Café Sello Rojo 110g: 10% de descuento, 10.340 unidades asignadas entre Altillanos, Bogotá, Tolima Huila, Santander, Eje Cafetero, Costa Norte, Costa Sur y Cali. Segmento: TD-MM.",
@@ -1025,7 +1025,7 @@
   {
     "id": "m09",
     "segmento": "minimercados",
-    "creador": "negocio",
+    "creador": "trade",
     "tipo": "push",
     "nombre": "Oferta Trade La Bastilla 110g — CMU.11 Bastilla fte PE",
     "resumen": "Oferta PRE de noviembre para Café La Bastilla 110g: 8% de descuento, 3.700 unidades, alcance nacional. Segmento: Tiendas y MM.",

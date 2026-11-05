@@ -989,7 +989,7 @@
   {
     "id": "m07",
     "segmento": "minimercados",
-    "creador": "trade",
+    "creador": "negocio",
     "tipo": "na",
     "nombre": "Combo Trade Sello Rojo 110g — CMU.11 Sello Rojo fte PE",
     "resumen": "Oferta PRE de noviembre (\"Ofertas Trade\"/Plan DN) para Café Sello Rojo 110g: 8% de descuento sobre precio de lista, 600 unidades asignadas. Segmento: TD, MM. Región: Antioquia.",
@@ -1007,7 +1007,7 @@
   {
     "id": "m08",
     "segmento": "minimercados",
-    "creador": "trade",
+    "creador": "negocio",
     "tipo": "na",
     "nombre": "Combo Trade Sello Rojo 110g — CMU.13 Sello Rojo fte PE",
     "resumen": "Oferta PRE de noviembre para Café Sello Rojo 110g: 10% de descuento, 10.340 unidades asignadas entre Altillanos, Bogotá, Tolima Huila, Santander, Eje Cafetero, Costa Norte, Costa Sur y Cali. Segmento: TD-MM.",
@@ -1025,7 +1025,7 @@
   {
     "id": "m09",
     "segmento": "minimercados",
-    "creador": "trade",
+    "creador": "negocio",
     "tipo": "na",
     "nombre": "Oferta Trade La Bastilla 110g — CMU.11 Bastilla fte PE",
     "resumen": "Oferta PRE de noviembre para Café La Bastilla 110g: 8% de descuento, 3.700 unidades, alcance nacional. Segmento: Tiendas y MM.",
@@ -1043,7 +1043,7 @@
   {
     "id": "m10",
     "segmento": "minimercados",
-    "creador": "trade",
+    "creador": "negocio",
     "tipo": "na",
     "nombre": "Colcafé Combo — CMU 2 Pleg 1,5gr + 1 Liofilizado 18g PE",
     "resumen": "Oferta PRE de noviembre para Colcafé (2 plegadizas 1,5gr + 1 liofilizado 18g): 15% de descuento, sin techo de unidades. Asignación regional: Costa Norte 2.400 / Costa Sur 1.300. Segmento: TD-MM.",
@@ -1061,7 +1061,7 @@
   {
     "id": "m11",
     "segmento": "minimercados",
-    "creador": "trade",
+    "creador": "negocio",
     "tipo": "na",
     "nombre": "Colcafé Combo — CMU.2 ristra Clásico 8g + 1 ristra Liofilizado 18g PE",
     "resumen": "Oferta PRE de noviembre para Colcafé (2 ristras Clásico 8g + 1 ristra Liofilizado 18g): 15% de descuento, sin techo de unidades, alcance nacional excepto Antioquia. Segmento: TD-MM-CL.",
@@ -1079,7 +1079,7 @@
   {
     "id": "m12",
     "segmento": "minimercados",
-    "creador": "trade",
+    "creador": "negocio",
     "tipo": "na",
     "nombre": "La Especial Tradicional 500g — CMU P10LL12",
     "resumen": "Oferta PRE de noviembre para Chocolate La Especial Tradicional 500g: paga 10, lleva 12. PSP $126.000, rentabilidad 39,5% (Plan 360). Segmento: TD-CL-MM-MK.",
@@ -1097,7 +1097,7 @@
   {
     "id": "m13",
     "segmento": "minimercados",
-    "creador": "trade",
+    "creador": "negocio",
     "tipo": "na",
     "nombre": "Tesalia Clavos y Canela 14g — CMU P30LL32",
     "resumen": "Oferta PRE para Chocolate Tesalia sin azúcar clavos y canela 14g: paga 30, lleva 32. PSP $38.400, rentabilidad 31%. Regiones: Medellín, Pereira. Segmento: TD-CL-MM-MK-AA.",
@@ -1117,7 +1117,7 @@
   {
     "id": "m14",
     "segmento": "minimercados",
-    "creador": "trade",
+    "creador": "negocio",
     "tipo": "na",
     "nombre": "Combo LYNE + Chocolisto — CMU En 1un 6sob 40g + Chocolisto 18sob 15g",
     "resumen": "Oferta PRE para el combo LYNE (6 sobres 40g) + Chocolisto (18 sobres 15g): 15% de descuento, PSP $41.400, 10 porciones a $450 c/u. Alcance nacional. Segmento: TD-CL-MM-MK-AA.",
@@ -1137,7 +1137,7 @@
   {
     "id": "m15",
     "segmento": "minimercados",
-    "creador": "trade",
+    "creador": "negocio",
     "tipo": "na",
     "nombre": "Corona 25g — CMU 40 pastillas x 10 displays P38LL40",
     "resumen": "Oferta PRE para Chocolate Corona Tradicional 25g (40 pastillas x 10 displays): paga 38, lleva 40. PSP $40.000. Región: Costa. Segmento: AA-TD-CL-MM-MK-DR.",
@@ -1155,7 +1155,7 @@
   {
     "id": "m16",
     "segmento": "minimercados",
-    "creador": "trade",
+    "creador": "negocio",
     "tipo": "na",
     "nombre": "Corona 450g — CMU 18 pastillas x 50 barras P9LL10",
     "resumen": "Oferta PRE para Chocolate Corona Tradicional 450g (18 pastillas x 50 barras): paga 9, lleva 10. PSP $156.000. Regiones: Antioquia, Bogotá, Altillanos, Suroccidente. Segmento: AA-TD-CL-MM-MK-DR.",
@@ -1173,7 +1173,7 @@
   {
     "id": "m17",
     "segmento": "minimercados",
-    "creador": "trade",
+    "creador": "negocio",
     "tipo": "na",
     "nombre": "Corona Clavos y Canela — CMU 5 unidades 450g x 18 pastillas x 50 barras",
     "resumen": "Oferta PRE para Chocolate Corona Clavos y Canela 450g: PSP $78.000, rentabilidad 19%. Regiones: Ibagué, Santander. Segmento: AA-TD-CL-MM-MK-DR.",
@@ -1191,7 +1191,7 @@
   {
     "id": "m18",
     "segmento": "minimercados",
-    "creador": "trade",
+    "creador": "negocio",
     "tipo": "na",
     "nombre": "Chocolisto Chocolate 18 sobres 15g — Paga 32 Lleva 36",
     "resumen": "Oferta PRE para Chocolisto Chocolate 15g (incluye modificador Chocolisto Col 20 risx18sob x2): 36 sobres (4 gratis), PSP $28.800, rentabilidad 37%. Segmento: AA-TD-CL-MM-MK-DR.",
@@ -1209,7 +1209,7 @@
   {
     "id": "m19",
     "segmento": "minimercados",
-    "creador": "trade",
+    "creador": "negocio",
     "tipo": "na",
     "nombre": "Tosh Infusiones — CMU.3 Infu Frt Silvestre GTS 1 Infu Frt Rojo",
     "resumen": "Oferta PRE para infusiones Tosh (3 Frutos Silvestres y Canela, gratis 1 Frutos Rojos): asignación 1.000 unidades, PSP $44.800, rentabilidad 66,7%. Alcance nacional. Segmento: MM, SUP.",
@@ -1227,7 +1227,7 @@
   {
     "id": "t36",
     "segmento": "superetes",
-    "creador": "trade",
+    "creador": "negocio",
     "tipo": "na",
     "nombre": "Tosh Infusiones — CMU.3 Infu Frt Silvestre GTS 1 Infu Frt Rojo",
     "resumen": "Oferta PRE para infusiones Tosh (3 Frutos Silvestres y Canela, gratis 1 Frutos Rojos): asignación 1.000 unidades, PSP $44.800, rentabilidad 66,7%. Alcance nacional. Segmento: MM, SUP.",
@@ -1245,7 +1245,7 @@
   {
     "id": "m20",
     "segmento": "minimercados",
-    "creador": "trade",
+    "creador": "negocio",
     "tipo": "na",
     "nombre": "Ofertas Multinegocio — CMU 2 Colcafé 8g + 1 Corona 25g + 8 Doria Clásica 250g",
     "resumen": "Combo multinegocio (Café + Chocolate + Pasta): 2 Colcafé 8g + 1 Corona 25g + 8 Doria Spaghetti Clásica 250g. Vende $95.200, gana $26.046, rentabilidad 38%. Alcance nacional. Segmento: AA-TD-MM-CL-DR-SU.",
@@ -1264,7 +1264,7 @@
   {
     "id": "t37",
     "segmento": "superetes",
-    "creador": "trade",
+    "creador": "negocio",
     "tipo": "na",
     "nombre": "Ofertas Multinegocio — CMU 2 Colcafé 8g + 1 Corona 25g + 8 Doria Clásica 250g",
     "resumen": "Combo multinegocio (Café + Chocolate + Pasta): 2 Colcafé 8g + 1 Corona 25g + 8 Doria Spaghetti Clásica 250g. Vende $95.200, gana $26.046, rentabilidad 38%. Alcance nacional. Segmento: AA-TD-MM-CL-DR-SU.",
@@ -1283,7 +1283,7 @@
   {
     "id": "m21",
     "segmento": "minimercados",
-    "creador": "trade",
+    "creador": "negocio",
     "tipo": "na",
     "nombre": "Ofertas Multinegocio — CMU 2 Colcafé 1,5g + 1 Corona 25g + 24 Comarrico 120g",
     "resumen": "Combo multinegocio (Café + Chocolate + Pasta): 2 Colcafé 1,5g + 1 Corona 25g + 24 Comarrico Spaghetti 120g. Vende $92.800, gana $26.589, rentabilidad 40%. Regiones: Costa y Santanderes. Segmento: AA-TD-MM-CL-DR-SU.",
@@ -1302,7 +1302,7 @@
   {
     "id": "t38",
     "segmento": "superetes",
-    "creador": "trade",
+    "creador": "negocio",
     "tipo": "na",
     "nombre": "Ofertas Multinegocio — CMU 2 Colcafé 1,5g + 1 Corona 25g + 24 Comarrico 120g",
     "resumen": "Combo multinegocio (Café + Chocolate + Pasta): 2 Colcafé 1,5g + 1 Corona 25g + 24 Comarrico Spaghetti 120g. Vende $92.800, gana $26.589, rentabilidad 40%. Regiones: Costa y Santanderes. Segmento: AA-TD-MM-CL-DR-SU.",
@@ -1321,7 +1321,7 @@
   {
     "id": "m22",
     "segmento": "minimercados",
-    "creador": "trade",
+    "creador": "negocio",
     "tipo": "na",
     "nombre": "Ofertas Multinegocio — CMU 2 Colcafé 8g + 1 Corona 25g + 12 Comarrico 250g",
     "resumen": "Combo multinegocio (Café + Chocolate + Pasta): 2 Colcafé 8g + 1 Corona 25g + 12 Comarrico Spaghetti 250g. Vende $97.600, gana $26.284, rentabilidad 37%. Región: Eje Cafetero. Segmento: AA-TD-MM-CL-DR-SU.",
@@ -1340,7 +1340,7 @@
   {
     "id": "t39",
     "segmento": "superetes",
-    "creador": "trade",
+    "creador": "negocio",
     "tipo": "na",
     "nombre": "Ofertas Multinegocio — CMU 2 Colcafé 8g + 1 Corona 25g + 12 Comarrico 250g",
     "resumen": "Combo multinegocio (Café + Chocolate + Pasta): 2 Colcafé 8g + 1 Corona 25g + 12 Comarrico Spaghetti 250g. Vende $97.600, gana $26.284, rentabilidad 37%. Región: Eje Cafetero. Segmento: AA-TD-MM-CL-DR-SU.",
@@ -1359,7 +1359,7 @@
   {
     "id": "m23",
     "segmento": "minimercados",
-    "creador": "trade",
+    "creador": "negocio",
     "tipo": "na",
     "nombre": "Doria 6 Un Spaghetti 1.000g",
     "resumen": "Oferta PRE para Doria Spaghetti 1000g (6 unidades). Precios diferenciados por grupo de segmento (CL-DS-TD-AA vs. MM-SU). Regiones: Antioquia, Suroccidente, Tolima Huila, Altillanos, Bogotá. Segmentos objetivos: CL-DS-TD-AA-SU-MM (aplica TD y MM indirecta).",
@@ -1377,7 +1377,7 @@
   {
     "id": "t40",
     "segmento": "superetes",
-    "creador": "trade",
+    "creador": "negocio",
     "tipo": "na",
     "nombre": "Doria 6 Un Spaghetti 1.000g",
     "resumen": "Oferta PRE para Doria Spaghetti 1000g (6 unidades). Precios diferenciados por grupo de segmento (CL-DS-TD-AA vs. MM-SU). Regiones: Antioquia, Suroccidente, Tolima Huila, Altillanos, Bogotá. Segmentos objetivos: CL-DS-TD-AA-SU-MM (aplica TD y MM indirecta).",
@@ -1395,7 +1395,7 @@
   {
     "id": "m24",
     "segmento": "minimercados",
-    "creador": "trade",
+    "creador": "negocio",
     "tipo": "na",
     "nombre": "Doria Spaghetti 125g — Paga 12 Lleva 13 un.",
     "resumen": "Oferta PRE para Doria Spaghetti 125g: paga 12, lleva 13 (1 unidad gratis), rentabilidad 32%. Regiones: Costa y Santander. Segmentos objetivos: CL-DS-TD-AA-SU-MM (aplica TD y MM indirecta).",
@@ -1413,7 +1413,7 @@
   {
     "id": "t41",
     "segmento": "superetes",
-    "creador": "trade",
+    "creador": "negocio",
     "tipo": "na",
     "nombre": "Doria Spaghetti 125g — Paga 12 Lleva 13 un.",
     "resumen": "Oferta PRE para Doria Spaghetti 125g: paga 12, lleva 13 (1 unidad gratis), rentabilidad 32%. Regiones: Costa y Santander. Segmentos objetivos: CL-DS-TD-AA-SU-MM (aplica TD y MM indirecta).",
@@ -1431,7 +1431,7 @@
   {
     "id": "m25",
     "segmento": "minimercados",
-    "creador": "trade",
+    "creador": "negocio",
     "tipo": "na",
     "nombre": "Doria Spaghetti 250g — Paga 12 Lleva 13 un.",
     "resumen": "Oferta PRE para Doria Spaghetti 250g: paga 12, lleva 13 (1 unidad gratis), rentabilidad 27-30% según segmento. Regiones: Antioquia, Suroccidente, Tolima Huila, Altillanos, Bogotá. Segmentos objetivos: CL-DS-TD-AA-SU-MM (aplica TD y MM indirecta).",
@@ -1449,7 +1449,7 @@
   {
     "id": "t42",
     "segmento": "superetes",
-    "creador": "trade",
+    "creador": "negocio",
     "tipo": "na",
     "nombre": "Doria Spaghetti 250g — Paga 12 Lleva 13 un.",
     "resumen": "Oferta PRE para Doria Spaghetti 250g: paga 12, lleva 13 (1 unidad gratis), rentabilidad 27-30% según segmento. Regiones: Antioquia, Suroccidente, Tolima Huila, Altillanos, Bogotá. Segmentos objetivos: CL-DS-TD-AA-SU-MM (aplica TD y MM indirecta).",

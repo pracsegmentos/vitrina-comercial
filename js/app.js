@@ -32,7 +32,6 @@ const ICONS = {
   search:'<svg viewBox="0 0 20 20" fill="none"><circle cx="9" cy="9" r="6" stroke="currentColor" stroke-width="2"/><path d="m18 18-4.3-4.3" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>',
   close:'<svg viewBox="0 0 20 20" fill="none"><path d="m5 5 10 10M15 5 5 15" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>',
   calendar:'<svg viewBox="0 0 20 20" fill="none"><rect x="3" y="4" width="14" height="13" rx="2" stroke="currentColor" stroke-width="1.6"/><path d="M3 8h14M7 2.5v3M13 2.5v3" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>',
-  coin:'<svg viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="7" stroke="currentColor" stroke-width="1.6"/><path d="M10 6.5v7M7.8 13v.3c0 1 .9 1.7 2.2 1.7s2.2-.6 2.2-1.6c0-2.3-4.4-1.4-4.4-3.7 0-1 1-1.6 2.2-1.6s2 .6 2.2 1.5" stroke="currentColor" stroke-width="1.3" stroke-linecap="round"/></svg>',
   link:'<svg viewBox="0 0 20 20" fill="none"><path d="M8.3 11.7a3 3 0 0 0 4.2 0l2.1-2.1a3 3 0 1 0-4.2-4.2l-1 1" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><path d="M11.7 8.3a3 3 0 0 0-4.2 0l-2.1 2.1a3 3 0 1 0 4.2 4.2l1-1" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>',
   edit:'<svg viewBox="0 0 20 20" fill="none"><path d="M11.3 4.3 15.7 8.7 7 17.4 3 18l.6-4Z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg>',
   empty:'<svg viewBox="0 0 40 40" fill="none"><rect x="6" y="12" width="28" height="20" rx="2" stroke="currentColor" stroke-width="2"/><path d="M6 18h28M13 12V8a4 4 0 0 1 4-4h6a4 4 0 0 1 4 4v4" stroke="currentColor" stroke-width="2"/></svg>',
@@ -56,12 +55,6 @@ function el(tag, attrs, html){
 }
 function esc(s){
   return String(s==null?'':s).replace(/[&<>"']/g, c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
-}
-function formatCOP(n){
-  if(n==null || isNaN(n)) return null;
-  const sign = n<0 ? '-' : '';
-  const v = Math.round(Math.abs(n)).toString().replace(/\B(?=(\d{3})+(?!\d))/g,'.');
-  return sign+'$'+v;
 }
 function formatMeses(arr, anio){
   if(!arr || !arr.length) return 'Vigencia no especificada';
@@ -155,19 +148,16 @@ function renderBoard(){
   const filtered=applyFilters(all);
 
   const wrap=el('div',{class:'segview'});
-  const totalInv = all.reduce((sum,d)=> sum + (typeof d.inversionMonto==='number' ? d.inversionMonto : 0), 0);
-  const conInv = all.filter(d=>d.tieneInversion).length;
   const activas = all.filter(d=>getEstado(d)==='activa').length;
 
   const head=el('div',{class:'segview-head'});
   head.innerHTML=`
     <div>
       <h2 class="segview-title" style="--seg-color:${cfg.color}"><svg viewBox="0 0 30 30" fill="none">${cfg.icon}</svg>${esc(cfg.label)}</h2>
-      <div class="segview-sub">${all.length} iniciativa${all.length===1?'':'s'} registrada${all.length===1?'':'s'} · ${activas} activa${activas===1?'':'s'} ahora · ${conInv} con inversión tangible</div>
+      <div class="segview-sub">${all.length} iniciativa${all.length===1?'':'s'} registrada${all.length===1?'':'s'} · ${activas} activa${activas===1?'':'s'} ahora</div>
     </div>
     <div class="kpis">
       <div class="kpi"><div class="kpi-label">Iniciativas</div><div class="kpi-value">${all.length}</div></div>
-      <div class="kpi"><div class="kpi-label">Inversión total</div><div class="kpi-value">${formatCOP(totalInv)||'—'}</div></div>
     </div>
   `;
   wrap.appendChild(head);
@@ -270,7 +260,6 @@ function renderCard(d, opts){
       ${opts.showSegment && seg ? `<span class="seg-chip" style="color:${seg.color}; background:${seg.bg}">${esc(seg.label)}</span>` : ''}
     </div>
     <div class="card-meta"><span>${ICONS.calendar}${esc(formatMeses(d.meses, d.anio))}</span></div>
-    ${d.tieneInversion ? `<div class="card-meta inv-flag">${ICONS.coin} Inversión tangible${typeof d.inversionMonto==='number' ? ' · '+formatCOP(d.inversionMonto) : ''}</div>` : ''}
   `;
   card.addEventListener('click', ()=> openDetail(d.id));
   return card;
@@ -309,17 +298,6 @@ function renderDetailDrawer(){
     body.appendChild(el('div',{class:'dblock'},
       `<div class="dblock-label">Resumen / mecánica</div><div class="dblock-text">${esc(d.resumen)}</div>`));
   }
-  const invBlock=el('div',{class:'dblock'});
-  invBlock.innerHTML=`<div class="dblock-label">Inversión</div>`;
-  if(d.tieneInversion){
-    const box=el('div',{class:'inv-box'});
-    box.innerHTML = `${typeof d.inversionMonto==='number' ? `<div class="inv-amount">${formatCOP(d.inversionMonto)}</div>` : ''}
-      ${d.inversionTexto ? `<div class="dblock-text" style="margin-top:6px;">${esc(d.inversionTexto)}</div>` : ''}`;
-    invBlock.appendChild(box);
-  } else {
-    invBlock.appendChild(el('div',{class:'dblock-text', style:'color:var(--ink-faint)'}, 'No se reporta una inversión económica tangible en esta iniciativa.'));
-  }
-  body.appendChild(invBlock);
   if(d.link){
     body.appendChild(el('div',{class:'dblock'},
       `<a class="link-btn" href="${esc(d.link)}" target="_blank" rel="noopener">${ICONS.link} Ver presentación</a>`));

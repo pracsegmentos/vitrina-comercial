@@ -186,7 +186,6 @@ main{flex:1; width:100%;}
 .card-meta-row{display:flex; align-items:center; flex-wrap:wrap; gap:7px;}
 .card-meta{display:flex; align-items:center; gap:10px; font-size:11.5px; color:var(--ink-dim);}
 .card-meta svg{width:12px; height:12px; vertical-align:-2px; margin-right:3px;}
-.inv-flag{display:inline-flex; align-items:center; gap:4px; color:var(--accent); font-weight:600;}
 .status-dot{display:inline-flex; align-items:center; gap:5px; font-size:10px; font-weight:700; text-transform:uppercase; letter-spacing:.03em; padding:2px 8px 2px 6px; border-radius:999px;}
 .status-dot::before{content:''; width:6px; height:6px; border-radius:50%; background:currentColor;}
 .seg-chip{font-size:10px; font-weight:700; text-transform:uppercase; letter-spacing:.03em; padding:2px 8px; border-radius:999px; background:var(--surface-3); color:var(--ink-dim);}
@@ -216,8 +215,6 @@ main{flex:1; width:100%;}
 .dimg{width:100%; border-radius:8px; border:1px solid var(--line); display:block; margin-bottom:10px; background:var(--surface-2);}
 .link-btn{display:inline-flex; align-items:center; gap:8px; background:var(--accent-dim); color:var(--accent); border-radius:8px; padding:10px 14px; font-weight:700; font-size:13px; text-decoration:none; border:1px solid transparent;}
 .link-btn:hover{border-color:var(--accent);}
-.inv-box{background:var(--surface-2); border:1px solid var(--line); border-radius:9px; padding:12px 14px;}
-.inv-amount{font-family:'IBM Plex Mono'; font-size:20px; font-weight:600; color:var(--accent);}
 .meta-foot{font-size:11.5px; color:var(--ink-faint); border-top:1px dashed var(--line); padding-top:12px; margin-top:4px;}
 
 .spinner{width:22px; height:22px; border-radius:50%; border:2.5px solid var(--line-strong); border-top-color:var(--accent); animation:spin .7s linear infinite;}

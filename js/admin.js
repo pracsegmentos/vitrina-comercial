@@ -152,10 +152,6 @@ function setMonths(meses) {
 function getMonths() {
   return [...document.querySelectorAll("#month-grid button.active")].map((b) => Number(b.dataset.m));
 }
-function setInversionVisibility(on) {
-  document.getElementById("inversion-fields").hidden = !on;
-}
-
 function openInitiative(id) {
   const p = initiatives.find((x) => x.id === id);
   if (!p) return;
@@ -175,10 +171,6 @@ function openInitiative(id) {
   setMonths(p.meses);
   document.getElementById("preview-imagen").src = p.imagen || "images/placeholder.svg";
   document.getElementById("file-imagen").value = "";
-  document.getElementById("chk-inversion").checked = !!p.tieneInversion;
-  setInversionVisibility(!!p.tieneInversion);
-  form.inversionMonto.value = p.inversionMonto ?? "";
-  form.inversionTexto.value = p.inversionTexto || "";
   document.getElementById("btn-eliminar").hidden = false;
   document.getElementById("form-status").textContent = "";
   document.getElementById("admin-form-box").hidden = false;
@@ -196,8 +188,6 @@ function openNewInitiative() {
   setChipChoice("tipo", "na");
   setMonths([]);
   document.getElementById("preview-imagen").src = "images/placeholder.svg";
-  document.getElementById("chk-inversion").checked = false;
-  setInversionVisibility(false);
   document.getElementById("btn-eliminar").hidden = true;
   document.getElementById("form-status").textContent = "";
   document.getElementById("admin-form-box").hidden = false;
@@ -267,7 +257,6 @@ async function handleSave(e) {
   status.textContent = "Guardando...";
   try {
     const nuevaImagen = await uploadImageIfNeeded(id);
-    const tieneInversion = document.getElementById("chk-inversion").checked;
 
     let duplicado = false;
     const message = `${currentId ? "Actualizar" : "Agregar"} iniciativa ${id}`;
@@ -289,9 +278,9 @@ async function handleSave(e) {
         anio: form.anio.value === "" ? null : Number(form.anio.value),
         link: form.link.value.trim(),
         imagen: imageWasRemoved ? null : (nuevaImagen || existing?.imagen || null),
-        tieneInversion,
-        inversionMonto: tieneInversion && form.inversionMonto.value !== "" ? Number(form.inversionMonto.value) : null,
-        inversionTexto: tieneInversion ? form.inversionTexto.value.trim() : "",
+        tieneInversion: false,
+        inversionMonto: null,
+        inversionTexto: "",
       };
 
       const nuevaLista = [...list];
@@ -344,7 +333,6 @@ function init() {
   document.querySelectorAll("#month-grid button").forEach((b) => {
     b.addEventListener("click", () => b.classList.toggle("active"));
   });
-  document.getElementById("chk-inversion").addEventListener("change", (e) => setInversionVisibility(e.target.checked));
   document.getElementById("file-imagen").addEventListener("change", (e) => {
     const file = e.target.files[0];
     if (!file) return;

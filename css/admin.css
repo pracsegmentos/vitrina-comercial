@@ -64,7 +64,6 @@ label > input, label > textarea{margin-top:6px; text-transform:none; font-weight
 .checkbox-row{display:flex; align-items:center; gap:8px; text-transform:none; font-weight:600; font-size:13px; color:var(--ink); cursor:pointer;}
 .checkbox-row input{width:auto; margin:0;}
 
-#inversion-fields{border-left:2px solid var(--accent-dim); padding-left:14px; margin:-4px 0 16px;}
 
 .form-actions{display:flex; gap:10px; margin-top:6px; flex-wrap:wrap;}
 #form-status{min-height:16px;}

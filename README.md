@@ -1,6 +1,6 @@
 # Vitrina Comercial
 
-Catálogo visual de las iniciativas comerciales por canal (Minimercados, Superetes, Droguería/Masivo/Bienestar — más una pestaña "Todos los segmentos"), pensado para ver rápido qué está corriendo, quién la creó (Trade, Negocios o Regionales), su estado (Activa/Próxima/Finalizada) y su vigencia — en reemplazo de ir a buscarlo en el Word/Excel de iniciativas. Sigue la guía de marca Nutresa (verde institucional, verde medio, lima, amarillo).
+Catálogo visual de las iniciativas comerciales por canal (Minimercados, Superetes — más una pestaña "Todos los segmentos"), pensado para ver rápido qué está corriendo, quién la creó (Trade, Negocios o Regionales), su estado (Activa/Próxima/Finalizada) y su vigencia — en reemplazo de ir a buscarlo en el Word/Excel de iniciativas. Sigue la guía de marca Nutresa (verde institucional, verde medio, lima, amarillo).
 
 ## Cómo funciona
 
@@ -58,7 +58,7 @@ Copia este bloque, pégalo dentro de los corchetes `[ ]` de `data/initiatives.js
 
 Notas:
 - `id` debe ser único por iniciativa.
-- `segmento`: `minimercados`, `superetes` o `drogueria` (Droguería/Masivo/Bienestar).
+- `segmento`: `minimercados` o `superetes`.
 - `creador`: `trade`, `negocio` o `regional`.
 - `tipo`: `push`, `pull`, `push_pull` (se muestra como "Ambas") o `na`.
 - El estado (Activa/Próxima/Finalizada) se calcula solo, comparando la fecha de hoy contra `meses`+`anio` — no es un campo que se edite a mano.
@@ -95,7 +95,6 @@ Cuando llega información de un mes nuevo (ej. noviembre) para un canal que ya t
 
 ## Pendiente
 
-- Cargar iniciativas de Droguería/Masivo/Bienestar (hoy solo tiene datos de Superetes y Minimercados, octubre-noviembre).
 - Revisar la ambigüedad de PDV marcada con ⚠️ en "PRIA campaña Yupi" (la mecánica dice 40 puntas de góndola, la tabla de asignación suma 50).
 - Completar mecánica y vigencia de las iniciativas cuya presentación de origen no tiene texto extraíble (solo imágenes): `r02` (Pasto Aniversario Titán), `r04` (Quincenazo de Café — Santander), `m02` (Reto 50-100 Antioquia), `m04` (Mes del Desatrace Ahorramax Bogotá), `m05` (Septiembrazo MM Tolima).
 - Confirmar con el equipo regional si "Cierre de Brechas — Altillano" (`r01`) debe quedar como una sola iniciativa o separarse en sus 3 incentivos por cliente (Su Amigo, Donde Vicson, Manaba Merkafruver).

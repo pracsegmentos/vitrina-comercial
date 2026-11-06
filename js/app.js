@@ -4,8 +4,6 @@ const SEGMENTS = [
     icon:'<path d="M4 10h24l-2 15a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2L4 10Z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="M9 10V8a7 7 0 0 1 14 0v2" fill="none" stroke="currentColor" stroke-width="2"/><path d="M11 15v4M21 15v4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>' },
   { id:'superetes', label:'Superetes', color:'var(--trade)', bg:'var(--trade-bg)',
     icon:'<path d="M4 9h24l-1.6 15.2A2 2 0 0 1 24.4 26H9.6a2 2 0 0 1-2-1.8L6 9Z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="M4 9l2-4h18l2 4" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="M12 13v3M16 13v3M20 13v3" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>' },
-  { id:'drogueria', label:'Droguería / Masivo / Bienestar', color:'var(--regional)', bg:'var(--regional-bg)',
-    icon:'<path d="M12 4h8a2 2 0 0 1 2 2v3h3a2 2 0 0 1 2 2v13a2 2 0 0 1-2 2H9a2 2 0 0 1-2-2V11a2 2 0 0 1 2-2h3V6a2 2 0 0 1 2-2Z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="M14 16h4M16 14v4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>' },
 ];
 const TODOS_TAB = { id:'todos', label:'Todos los segmentos', color:'var(--nutresa-dark)',
   icon:'<rect x="5" y="5" width="8" height="8" rx="1.5" fill="none" stroke="currentColor" stroke-width="2"/><rect x="17" y="5" width="8" height="8" rx="1.5" fill="none" stroke="currentColor" stroke-width="2"/><rect x="5" y="17" width="8" height="8" rx="1.5" fill="none" stroke="currentColor" stroke-width="2"/><rect x="17" y="17" width="8" height="8" rx="1.5" fill="none" stroke="currentColor" stroke-width="2"/>' };
